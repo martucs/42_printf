@@ -115,7 +115,8 @@ int	check_format(int *len, char const *s, int i, va_list args)
 					return (-1);
 			}
 		}
-		i++;
+		if (s[i] != '\0')
+			i++;
 	}
 	return (*len);
 }
